@@ -1,0 +1,630 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/MyProto.proto"
+
+WorldInfo {
+  info [
+    "Lab 2 - Scenario 3: Maze - complex labyrinth with multiple corridors and dead ends"
+    "ICI 4150 - Robotica y Sistemas Autonomos 2026-01"
+  ]
+  title "Lab2 - Escenario3"
+  basicTimeStep 64
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        0.5
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.5773505066702712 0.5773505989144857 0.5773497019836986 2.094400685127425
+  position 0 0 11
+}
+TexturedBackground {
+  texture "stadium"
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 4 4
+  floorAppearance PBRAppearance {
+    baseColor 0.772549 0.780392 0.631373
+    roughness 1
+    metalness 0
+  }
+  wallHeight 0.2
+}
+DEF GOAL Solid {
+  translation -0.17 1.11 0.005
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0.9 0.2
+        roughness 0.4
+        metalness 0.1
+        emissiveColor 0 0.4 0.05
+      }
+      geometry Box {
+        size 0.25 0.25 0.01
+      }
+    }
+  ]
+  name "goal_marker"
+}
+DEF MH1_TOP Solid {
+  translation -0.240092 -1.39975 0.096076
+  rotation -0.9944434832836946 -0.0009148013022190593 0.10526785688504366 0.0009414527387154131
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.45 0.45 0.55
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 2.2 0.08 0.2
+      }
+    }
+  ]
+  name "mh1_top"
+  boundingObject Box {
+    size 2.2 0.08 0.2
+  }
+  physics Physics {
+    density -1
+    mass 5
+  }
+}
+DEF MH1_BOT Solid {
+  translation -0.5 -1.77 0.0960793
+  rotation -0.9798493753797589 -0.198754146525118 -0.0197987577127516 7.201539938291404e-17
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.45 0.45 0.55
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 2.2 0.08 0.2
+      }
+    }
+  ]
+  name "mh1_bot"
+  boundingObject Box {
+    size 2.2 0.08 0.2
+  }
+  physics Physics {
+    density -1
+    mass 5
+  }
+}
+DEF MH1_RIGHT Solid {
+  translation 1.27031 -1.78005 0.0975986
+  rotation 5.969733548598725e-05 0.9557286022447055 -0.29424961391242244 0.0015230114811802746
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.45 0.45 0.55
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.08 0.48 0.2
+      }
+    }
+  ]
+  name "mh1_right"
+  boundingObject Box {
+    size 0.08 0.48 0.2
+  }
+  physics Physics {
+    density -1
+    mass 2
+  }
+}
+DEF MV1_LEFT Solid {
+  translation -1.2 0.1 0.0960793
+  rotation 4.6970026730367854e-17 0.993267914063763 -0.1158397638612112 1.0656376256186302e-16
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.4 0.4
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.08 2 0.2
+      }
+    }
+  ]
+  name "mv1_left"
+  boundingObject Box {
+    size 0.08 2 0.2
+  }
+  physics Physics {
+    density -1
+    mass 5
+  }
+}
+DEF MV1_RIGHT Solid {
+  translation -0.8 0.1 0.0960793
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.4 0.4
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.08 2 0.2
+      }
+    }
+  ]
+  name "mv1_right"
+  boundingObject Box {
+    size 0.08 2 0.2
+  }
+  physics Physics {
+    density -1
+    mass 5
+  }
+}
+DEF MV1_BOT Solid {
+  translation -1 -0.95 0.0984323
+  rotation -0.9651910350208613 0.1892851395814379 -0.18049211021259057 1.0661743176546947e-16
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.4 0.4
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.48 0.08 0.2
+      }
+    }
+  ]
+  name "mv1_bot"
+  boundingObject Box {
+    size 0.48 0.08 0.2
+  }
+  physics Physics {
+    density -1
+    mass 2
+  }
+}
+DEF MV2_LEFT Solid {
+  translation 0.147128 -0.300774 0.0958731
+  rotation 0.008118431302007624 -0.32440741369505827 0.9458826148169115 0.054325238228946825
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.4 0.55 0.45
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.08 1.6 0.2
+      }
+    }
+  ]
+  name "mv2_left"
+  boundingObject Box {
+    size 0.08 1.6 0.2
+  }
+  physics Physics {
+    density -1
+    mass 5
+  }
+}
+DEF MV2_RIGHT Solid {
+  translation 0.662857 -0.301288 0.0956968
+  rotation 0.008118431302009333 0.3244074136950619 -0.9458826148169103 0.054325238228946755
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.4 0.55 0.45
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.08 1.6 0.2
+      }
+    }
+  ]
+  name "mv2_right"
+  boundingObject Box {
+    size 0.08 1.6 0.2
+  }
+  physics Physics {
+    density -1
+    mass 5
+  }
+}
+DEF MV2_TOP Solid {
+  translation 0.4 0.240209 0.0988094
+  rotation -1 1.7206282021940377e-14 -4.6091970834541115e-14 0.0019832662904003375
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.4 0.55 0.45
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.48 0.08 0.2
+      }
+    }
+  ]
+  name "mv2_top"
+  boundingObject Box {
+    size 0.48 0.08 0.2
+  }
+  physics Physics {
+    density -1
+    mass 2
+  }
+}
+DEF MH2_BOT Solid {
+  translation 0.548212369103829 0.9004563899103392 0.09609819160572194
+  rotation -0.9999498611842715 -0.009556838110004445 0.0029903115047487105 0.004391819280247362
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.45 0.45 0.6
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 1.9 0.08 0.2
+      }
+    }
+  ]
+  name "mh2_bot"
+  boundingObject Box {
+    size 1.9 0.08 0.2
+  }
+  physics Physics {
+    density -1
+    mass 5
+  }
+  linearVelocity -2.1324753658657872e-05 -1.7329562663442297e-05 -9.92700628548846e-06
+  angularVelocity 0.0002362265735344476 3.558193600007016e-06 5.1954103706385125e-06
+}
+DEF MH2_TOP Solid {
+  translation 1.06003 1.3 0.0960768
+  rotation 0.996785048019206 0.07931218868018607 -0.01136418814115471 2.8870733195417994e-05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.45 0.45 0.6
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 1.9 0.08 0.2
+      }
+    }
+  ]
+  name "mh2_top"
+  boundingObject Box {
+    size 1.9 0.08 0.2
+  }
+  physics Physics {
+    density -1
+    mass 5
+  }
+}
+DEF MH2_LEFT Solid {
+  translation -0.44057035805399886 1.1000817329993329 0.09842745115330019
+  rotation -0.0013588194401435152 -0.7062623030629264 -0.7079489479347931 0.006095003022025408
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.45 0.45 0.6
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.08 0.48 0.2
+      }
+    }
+  ]
+  name "mh2_left"
+  boundingObject Box {
+    size 0.08 0.48 0.2
+  }
+  physics Physics {
+    density -1
+    mass 2
+  }
+  linearVelocity -1.8958236537736762e-05 1.1838505533050558e-06 4.388696208025067e-06
+  angularVelocity -1.0196366121258638e-05 8.934817067805804e-05 -2.077646058600595e-05
+}
+DEF LWALL_H Solid {
+  translation 1.55019 -0.152765 0.0935308
+  rotation 0.00849166879571649 0.09871671484198653 -0.9950793444604655 0.17623487589815984
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.4 0.6
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.08 1.4 0.2
+      }
+    }
+  ]
+  name "lwall_h"
+  boundingObject Box {
+    size 0.08 1.4 0.2
+  }
+  physics Physics {
+    density -1
+    mass 4
+  }
+}
+DEF DIAG1 Solid {
+  translation -1.91 -0.6 0.0996081
+  rotation 0.08475672074384405 -0.6780537659507518 -0.7301091622276448 2.5753559895880807e-16
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.7 0.55 0.3
+        roughness 0.7
+        metalness 0
+      }
+      geometry Box {
+        size 0.15 0.15 0.2
+      }
+    }
+  ]
+  name "diag1"
+  boundingObject Box {
+    size 0.15 0.15 0.2
+  }
+  physics Physics {
+    density -1
+    mass 0.5
+  }
+}
+DEF DIAG3 Solid {
+  translation -1.5 -0.3 0.09960808458200497
+  rotation 0.9436828274166768 -0.28310484822500326 0.17121438651691795 2.3130518229630027e-16
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.7 0.55 0.3
+        roughness 0.7
+        metalness 0
+      }
+      geometry Box {
+        size 0.15 0.15 0.2
+      }
+    }
+  ]
+  name "diag3"
+  boundingObject Box {
+    size 0.15 0.15 0.2
+  }
+  physics Physics {
+    density -1
+    mass 0.5
+  }
+  linearVelocity 7.895584321913636e-17 -1.1382154970405433e-17 -1.8940552027970664e-06
+  angularVelocity -3.410605131648484e-16 6.821210263296963e-16 -1.7997758091575143e-17
+}
+DEF OBS1 Solid {
+  translation -1.7 1.5 0.049764851033721164
+  rotation -8.975840527466444e-16 0.8482327513145664 -0.5296236395756149 1.6478837750773831e-16
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.9 0.6 0.1
+        roughness 0.5
+        metalness 0
+      }
+      geometry Box {
+        size 0.12 0.12 0.1
+      }
+    }
+  ]
+  name "obs1"
+  boundingObject Box {
+    size 0.12 0.12 0.1
+  }
+  physics Physics {
+    density -1
+    mass 0.3
+  }
+  linearVelocity 8.48405297023395e-17 9.598251032582938e-18 -1.1372671055672407e-06
+  angularVelocity 1.4560301962297131e-15 1.4560301962297131e-15 8.497994618670025e-17
+}
+DEF OBS2 Solid {
+  translation -0.5 1.8 0.049764851033721184
+  rotation -1.2857743522028913e-15 0.6627705964500659 0.7488224999832896 2.109008751847718e-16
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.1 0.7 0.5
+        roughness 0.5
+        metalness 0
+      }
+      geometry Box {
+        size 0.12 0.12 0.1
+      }
+    }
+  ]
+  name "obs2"
+  boundingObject Box {
+    size 0.12 0.12 0.1
+  }
+  physics Physics {
+    density -1
+    mass 0.3
+  }
+  linearVelocity 4.8474071254566206e-17 3.292521216432719e-17 -1.1372671056619796e-06
+  angularVelocity -1.4560301962297133e-15 7.280150981148564e-16 -4.574661152189148e-17
+}
+DEF OBS3 Solid {
+  translation 1.6 -1.6 0.049764851033721164
+  rotation -8.975840527466444e-16 0.8482327513145664 -0.5296236395756149 1.6478837750773831e-16
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.1 0.8
+        roughness 0.5
+        metalness 0
+      }
+      geometry Box {
+        size 0.12 0.12 0.1
+      }
+    }
+  ]
+  name "obs3"
+  boundingObject Box {
+    size 0.12 0.12 0.1
+  }
+  physics Physics {
+    density -1
+    mass 0.3
+  }
+  linearVelocity 8.48405297023395e-17 9.598251032582938e-18 -1.1372671055672407e-06
+  angularVelocity 1.4560301962297131e-15 1.4560301962297131e-15 8.497994618670025e-17
+}
+DEF OBS6 Solid {
+  translation -1.7 1 0.0497649
+  rotation -8.975840527466444e-16 0.8482327513145664 -0.5296236395756149 1.6478837750773831e-16
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.8 0.9
+        roughness 0.5
+        metalness 0
+      }
+      geometry Box {
+        size 0.12 0.12 0.1
+      }
+    }
+  ]
+  name "obs6"
+  boundingObject Box {
+    size 0.12 0.12 0.1
+  }
+  physics Physics {
+    density -1
+    mass 0.3
+  }
+}
+DEF CYL1 Solid {
+  translation 1.31 -1.18 0.0796834
+  rotation 1.49204e-16 1 3.58206e-18 1.5708
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.2
+        roughness 0.4
+        metalness 0.2
+      }
+      geometry Cylinder {
+        height 0.16
+        radius 0.06
+      }
+    }
+  ]
+  name "cyl1"
+  boundingObject Cylinder {
+    height 0.16
+    radius 0.06
+  }
+  physics Physics {
+    density -1
+    mass 0.4
+  }
+}
+DEF CYL2 Solid {
+  translation -1.5 -1.2 0.07968344328035903
+  rotation -0.3424570069390352 0.8267650167523263 -0.44629900904313374 -1.4962553071795863
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.6 0.8
+        roughness 0.4
+        metalness 0.2
+      }
+      geometry Cylinder {
+        height 0.16
+        radius 0.06
+      }
+    }
+  ]
+  name "cyl2"
+  boundingObject Cylinder {
+    height 0.16
+    radius 0.06
+  }
+  physics Physics {
+    density -1
+    mass 0.4
+  }
+}
+DEF CYL3 Solid {
+  translation 0.9 1.7 0.07968344328035902
+  rotation 3.0062e-16 1 -8.5136e-18 -1.3089953071795861
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.9 0.4 0.6
+        roughness 0.4
+        metalness 0.2
+      }
+      geometry Cylinder {
+        height 0.16
+        radius 0.06
+      }
+    }
+  ]
+  name "cyl3"
+  boundingObject Cylinder {
+    height 0.16
+    radius 0.06
+  }
+  physics Physics {
+    density -1
+    mass 0.4
+  }
+}
+DEF PILLAR Solid {
+  translation -0.36 -0.05 0.117648
+  rotation -0.19596932879282913 -0.979846643964139 -0.03868561082239752 8.756613852611238e-17
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.3 0.3 0.35
+        roughness 0.9
+        metalness 0.1
+      }
+      geometry Box {
+        size 0.22 0.22 0.24
+      }
+    }
+  ]
+  name "pillar_central"
+  boundingObject Box {
+    size 0.22 0.22 0.24
+  }
+  physics Physics {
+    density -1
+    mass 3
+  }
+}
+MyProto {
+  translation -0.56 -0.62 0
+  controller "Controlador_Tarea2"
+}

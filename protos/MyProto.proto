@@ -1,0 +1,20 @@
+#VRML_SIM R2025a utf8
+# Describe the functionality of your PROTO here.
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+PROTO MyProto [
+  field SFVec3f translation 0 0 0 # Is `Pose.translation`.
+  field SFRotation rotation 0 0 1 0 # Is `Pose.rotation`.
+  field SFString name "e-puck" # Is `Solid.name`.
+  field SFString controller "<generic>"
+
+]
+{
+  E-puck {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    controller IS controller
+  }
+}

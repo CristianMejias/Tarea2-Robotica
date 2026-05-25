@@ -1,0 +1,48 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/MyProto.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/GalvanizedMetal.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5360442263401379 0.5353663058329153 0.652717018305958 2.001854070879938
+  position 0.1543187773882904 -0.6348309707105961 3.652431089930124
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+MyProto {
+  hidden position_0_0 1.9172510881095088
+  hidden position_0_1 1.917251087835612
+  hidden rotation_1 0 1 0 1.9172510881095088
+  hidden rotation_2 0 1 0 1.917251087835612
+  translation -8.83248e-07 -0.00160001 0.000207413
+  rotation 0.000752641368062282 -0.0007496967228012852 0.9999994357427382 1.5708008214922609
+  controller "Controlador_Tarea2"
+}
+Solid {
+  translation 0 0.47 0.05
+  children [
+    Shape {
+      appearance GalvanizedMetal {
+      }
+      geometry Box {
+        size 0.4 0.1 0.1
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  recognitionColors [
+    0 0.333333 1
+  ]
+}
