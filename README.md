@@ -5,6 +5,11 @@
 **Laboratorio:** Nº 2  
 **Robot:** e-puck en Webots  
 
+## Enlaces de resultados
+
+- [Gráficos de resultados](https://drive.google.com/file/d/1TsgHv_jat24M0voynRaexSVvyWTIgQlf/view?usp=sharing)
+- [Videos y archivos CSV con los datos](https://drive.google.com/drive/folders/1HEf_DHBYBQI0cDdydECM2IKbRHDjNtv2)
+
 ## Integrantes
 
 - Pablo Aguilera
@@ -447,19 +452,19 @@ El objetivo de este gráfico es observar el comportamiento directo de los sensor
 
 #### Escenario Básico
 
-![Básico — Sin filtro](graficos_lab2_solo_solicitado/básico_01_sin_filtro.png)
+![Básico — Sin filtro](Graficos/básico_01_sin_filtro.png)
 
 #### Escenario Simple
 
-![Simple — Sin filtro](graficos_lab2_solo_solicitado/simple_01_sin_filtro.png)
+![Simple — Sin filtro](Graficos/simple_01_sin_filtro.png)
 
 #### Escenario Complejo
 
-![Complejo — Sin filtro](graficos_lab2_solo_solicitado/complejo_01_sin_filtro.png)
+![Complejo — Sin filtro](Graficos/complejo_01_sin_filtro.png)
 
 #### Escenario 3
 
-![Escenario 3 — Sin filtro](graficos_lab2_solo_solicitado/escenario_3_01_sin_filtro.png)
+![Escenario 3 — Sin filtro](Graficos/escenario_3_01_sin_filtro.png)
 
 ### 2. Con filtro
 
@@ -469,19 +474,19 @@ El objetivo de este gráfico es comprobar si el filtro reduce la variación de l
 
 #### Escenario Básico
 
-![Básico — Con filtro](graficos_lab2_solo_solicitado/básico_02_con_filtro.png)
+![Básico — Con filtro](Graficos/básico_02_con_filtro.png)
 
 #### Escenario Simple
 
-![Simple — Con filtro](graficos_lab2_solo_solicitado/simple_02_con_filtro.png)
+![Simple — Con filtro](Graficos/simple_02_con_filtro.png)
 
 #### Escenario Complejo
 
-![Complejo — Con filtro](graficos_lab2_solo_solicitado/complejo_02_con_filtro.png)
+![Complejo — Con filtro](Graficos/complejo_02_con_filtro.png)
 
 #### Escenario 3
 
-![Escenario 3 — Con filtro](graficos_lab2_solo_solicitado/escenario_3_02_con_filtro.png)
+![Escenario 3 — Con filtro](Graficos/escenario_3_02_con_filtro.png)
 
 ### 3. Filtro de Kalman
 
@@ -491,25 +496,25 @@ El objetivo es verificar si la estimación de Kalman entrega una señal más est
 
 #### Escenario Básico
 
-![Básico — Kalman](graficos_lab2_solo_solicitado/básico_03_kalman.png)
+![Básico — Kalman](Graficos/básico_03_kalman.png)
 
 #### Escenario Simple
 
-![Simple — Kalman](graficos_lab2_solo_solicitado/simple_03_kalman.png)
+![Simple — Kalman](Graficos/simple_03_kalman.png)
 
 #### Escenario Complejo
 
-![Complejo — Kalman](graficos_lab2_solo_solicitado/complejo_03_kalman.png)
+![Complejo — Kalman](Graficos/complejo_03_kalman.png)
 
 #### Escenario 3
 
-![Escenario 3 — Kalman](graficos_lab2_solo_solicitado/escenario_3_03_kalman.png)
+![Escenario 3 — Kalman](Graficos/escenario_3_03_kalman.png)
 
 ### 4. Comparación por escenario del desplazamiento por paso
 
 El último gráfico compara el desplazamiento por paso `avance_ds_m` en todos los escenarios. La finalidad es observar qué escenario exige más maniobras de corrección, escape o retroceso, y cuál mantiene un avance más continuo.
 
-![Comparación por escenario — desplazamiento por paso](graficos_lab2_solo_solicitado/comparacion_por_escenario_desplazamiento_por_paso.png)
+![Comparación por escenario — desplazamiento por paso](Graficos/comparacion_por_escenario_desplazamiento_por_paso.png)
 
 En esta comparación, los valores cercanos a cero representan instantes de poco avance o corrección de trayectoria, mientras que las caídas bajo cero indican retrocesos o maniobras de escape. Las diferencias entre escenarios permiten evaluar cómo cambia el comportamiento del robot según la complejidad del entorno.
 
